@@ -2,32 +2,50 @@
 @tailwind components;
 @tailwind utilities;
 
+/* from-[#9F6446] to-[#dd8458] */
+
 :root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+  --base-background: #fff4dd;
+  --dongker-color: #23314c;
+  --orange-color: #ffab16;
+  --yellow-color: #ffe629;
+  --gray-color: #c6beb9;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
+* {
+  user-select: none;
 }
 
 body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+  background: var(--base-background);
 }
 
 @layer utilities {
-  .text-balance {
-    text-wrap: balance;
+  .custom__container {
+    @apply mx-auto w-full max-w-[1380px] px-4 lg:px-8;
+  }
+}
+
+/* Animations */
+.animate__swing {
+  animation: swing 2s infinite;
+  transform-origin: top center;
+}
+
+@keyframes swing {
+  20% {
+    transform: rotate3d(0, 0, 0, 0deg);
+  }
+  40% {
+    transform: rotate3d(0, 0, 1, -20deg);
+  }
+  60% {
+    transform: rotate3d(0, 0, 1, 10deg);
+  }
+  80% {
+    transform: rotate3d(0, 0, 1, -5deg);
+  }
+  100% {
+    transform: rotate3d(0, 0, 0, 0deg);
   }
 }
