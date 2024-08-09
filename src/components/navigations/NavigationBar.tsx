@@ -57,7 +57,7 @@ export default function NavigationBar() {
                     className="saturate-200"
                   />
                 </div>
-                <div className="font-rubik text-nowrap text-2xl font-semibold lg:text-[28px]">
+                <div className="text-nowrap text-2xl font-bold lg:text-[28px]">
                   <span className="text-black/80">KOS</span>
                   <span className="bg-gradient-to-r from-[#9F6446] to-[#dd8458] bg-clip-text text-transparent">
                     DEN

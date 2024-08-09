@@ -1,10 +1,11 @@
 import Image from "next/image";
+import ShuffleGrid from "../ui/ShuffleGrid";
 
 export default function MainSection() {
   return (
-    <section id="home" className="w-full py-6 lg:py-3">
+    <section id="home" className="w-full py-12 lg:py-16">
       <div className="custom__container">
-        <main className="relative flex h-auto w-full flex-col items-center justify-between gap-y-14 lg:h-[600px] lg:flex-row">
+        <main className="relative flex h-auto w-full flex-col items-center justify-between gap-y-14 lg:flex-row">
           <div className="order-2 -mt-4 flex w-full flex-col items-center text-center lg:order-1 lg:items-start lg:text-start">
             <div className="relative aspect-square w-[45px] lg:w-[72px]">
               <Image
@@ -20,26 +21,28 @@ export default function MainSection() {
                 KOSDEN
               </span>
             </h1>
-            <p className="mt-2 text-black/60 lg:max-w-[500px] lg:text-lg">
+            <p className="mt-2 text-black/70 lg:max-w-[500px] lg:text-lg">
               Selamat datang di website KOSDEN, disini anda dapat mengeksplorasi
               berbagai macam kos yang kami sediakan
             </p>
             <a
               href="#about"
-              className="mt-5 w-fit bg-[#db8a00] px-8 py-2.5 font-medium text-white shadow-[3px_3px_0px_black] transition-all hover:translate-x-[3px] hover:translate-y-[3px] hover:shadow-none lg:text-lg"
+              className="mt-5 w-fit rounded-md bg-[#db8a00] px-8 py-2.5 font-medium text-white shadow-[3px_3px_0px_black] transition-all hover:translate-x-[3px] hover:translate-y-[3px] hover:shadow-none lg:text-lg"
             >
               Explore
             </a>
           </div>
 
-          <div className="relative order-1 h-[360px] w-full lg:order-2 lg:h-full">
+          {/* <div className="relative order-1 h-[360px] w-full lg:order-2 lg:h-full">
             <Image
-              className="object-contain duration-500 ease-in-out hover:rotate-3 hover:scale-105"
+              className="object-contain saturate-150 duration-500 ease-in-out hover:rotate-3 hover:scale-105"
               src="/images/hero.png"
               alt="Hero"
               fill
             />
-          </div>
+          </div> */}
+
+          <ShuffleGrid />
         </main>
       </div>
     </section>

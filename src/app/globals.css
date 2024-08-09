@@ -2,7 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 
-/* from-[#9F6446] to-[#dd8458] */
+/* from-[#9F6446] to-[#dd8458] #ffea00 #ffaa00 */
 
 :root {
   --base-background: #fff4dd;
@@ -16,13 +16,17 @@
   user-select: none;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   background: var(--base-background);
 }
 
 @layer utilities {
   .custom__container {
-    @apply mx-auto w-full max-w-[1380px] px-4 lg:px-8;
+    @apply mx-auto w-full max-w-[1300px] px-4 lg:px-8;
   }
 }
 
