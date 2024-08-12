@@ -2,18 +2,18 @@ import Image from "next/image";
 
 const aboutUsInfo = [
   {
-    label: "Kos ",
-    icon: "",
+    label: "Vision",
+    icon: "/icons/vision.png",
     description: "",
   },
   {
     label: "Mission",
-    icon: "",
+    icon: "/icons/mission.png",
     description: "",
   },
   {
     label: "Why Us",
-    icon: "",
+    icon: "/icons/why-us.png",
     description: "",
   },
 ];
@@ -38,16 +38,16 @@ export default function AboutSection() {
           </div>
 
           {/* Content */}
-          <div className="grid w-full grid-cols-1 gap-x-8 gap-y-8 lg:grid-cols-3">
+          <div className="grid w-full grid-cols-1 gap-x-8 gap-y-6 lg:grid-cols-3">
             {aboutUsInfo?.map((info, index) => (
               <div
-                className="col-span-1 flex h-auto w-full flex-col gap-y-4 rounded-xl bg-[#ffeeca] p-7 shadow-none transition-all hover:translate-x-[-5px] hover:translate-y-[-5px] hover:shadow-[5px_5px_0px_#8c6001]"
+                className="col-span-1 flex h-auto w-full flex-col gap-y-4 rounded-xl border border-[#754a00]/20 bg-[#ffeeca] p-7 shadow-none transition-all hover:translate-x-[-5px] hover:translate-y-[-5px] hover:shadow-[5px_5px_0px_#8c6001]"
                 key={info?.label + index}
               >
                 <div className="relative aspect-square w-[42px] lg:w-[54px]">
                   <Image
-                    src="/logo.png"
-                    alt="Logo"
+                    src={info?.icon}
+                    alt={info?.label}
                     fill
                     className="saturate-200"
                   />

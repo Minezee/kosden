@@ -5,23 +5,23 @@ const rentalPlaces = [
   {
     name: "DK Living",
     imageURL: "/images/rental/1. Kos DK Living.jpg",
-    description: "",
+    location: "Jalan Soekarno Hatta Indah V no.7B",
   },
   {
     name: "Griya Artha Prima",
     imageURL: "/images/rental/2. Kos Griya Artha Prima.jpg",
-    description: "",
+    location: "Jalan Candi Mendut Barat Blok C no.16",
   },
   {
     name: "Maliqa",
     imageURL: "/images/rental/3. Kos Maliqa.jpg",
-    description: "",
+    location: "Jalan Candi Mendut Selatan III no.18",
   },
 ];
 
 export default function RentalPlaceSection() {
   return (
-    <section id="rentalPlace" className="w-full py-16 lg:py-20">
+    <section id="location" className="w-full py-16 lg:py-20">
       <div className="custom__container">
         <div className="relative flex h-auto w-full flex-col items-center justify-between gap-y-10 lg:gap-y-14">
           {/* Headers */}
@@ -39,7 +39,7 @@ export default function RentalPlaceSection() {
           </div>
 
           {/* Content */}
-          <div className="grid w-full grid-cols-1 gap-x-8 gap-y-8 lg:grid-cols-3">
+          <div className="grid w-full grid-cols-1 gap-x-8 gap-y-6 lg:grid-cols-3">
             {rentalPlaces?.map((info, index) => (
               <div
                 className="group relative col-span-1 flex h-[320px] w-full cursor-pointer flex-col gap-y-4 overflow-hidden rounded-xl bg-[#ffeeca] p-7 sm:h-[460px]"
@@ -55,8 +55,8 @@ export default function RentalPlaceSection() {
                 <div className="absolute bottom-0 left-0 h-auto w-full translate-y-[100%] bg-gradient-to-t from-[#ffeeca] to-black/0 p-3 duration-500 ease-in-out group-hover:translate-y-[0%]">
                   <div className="flex h-full w-full flex-col justify-end gap-y-5 rounded-lg bg-[#241503] p-4 backdrop-blur-md">
                     <div className="flex w-full items-center justify-between">
-                      <span className="text-sm text-white/70 underline decoration-white/50 underline-offset-2">
-                        Kos Putri
+                      <span className="text-sm text-[#d4cab4] underline decoration-[#d4cab4]/80 underline-offset-2">
+                        Click to see more details
                       </span>
                       <Link
                         href={"/kost/"}
@@ -77,20 +77,12 @@ export default function RentalPlaceSection() {
                         </svg>
                       </Link>
                     </div>
-                    {/* <div className="relative aspect-square w-[42px] lg:w-[54px]">
-                      <Image
-                        src="/logo.png"
-                        alt="Logo"
-                        fill
-                        className="saturate-200"
-                      />
-                    </div> */}
                     <div className="">
-                      <h3 className="mt-auto text-xl font-semibold text-white/90">
+                      <h3 className="mt-auto text-xl font-semibold text-[#ffeeca]">
                         {info?.name}
                       </h3>
-                      <span className="text-sm text-white/70">
-                        Lokasi Jl. Raya Kusuma 12
+                      <span className="text-sm text-[#d4cab4]">
+                        {info?.location}
                       </span>
                     </div>
                   </div>

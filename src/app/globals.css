@@ -2,12 +2,10 @@
 @tailwind components;
 @tailwind utilities;
 
-/* from-[#9F6446] to-[#dd8458] #ffea00 #ffaa00 */
-
 :root {
   --base-background: #fff4dd;
   --dongker-color: #23314c;
-  --orange-color: #ffab16;
+  --orange-color: #ffab00;
   --yellow-color: #ffe629;
   --gray-color: #c6beb9;
 }

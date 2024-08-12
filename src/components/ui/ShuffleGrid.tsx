@@ -19,27 +19,55 @@ const squareData = [
   },
   {
     id: 4,
-    src: "/images/rental/1. Kos DK Living.jpg",
+    src: "/images/rental/DK Living/kamar.jpg",
   },
   {
     id: 5,
-    src: "/images/rental/2. Kos Griya Artha Prima.jpg",
+    src: "/images/rental/DK Living/kamar3.jpg",
   },
   {
     id: 6,
-    src: "/images/rental/3. Kos Maliqa.jpg",
+    src: "/images/rental/DK Living/living.jpg",
   },
   {
     id: 7,
-    src: "/images/rental/1. Kos DK Living.jpg",
+    src: "/images/rental/DK Living/living2.jpg",
   },
   {
     id: 8,
-    src: "/images/rental/2. Kos Griya Artha Prima.jpg",
+    src: "/images/rental/Maliqa/kamar3.jpg",
   },
   {
     id: 9,
-    src: "/images/rental/3. Kos Maliqa.jpg",
+    src: "/images/rental/Maliqa/kamar.jpg",
+  },
+  {
+    id: 10,
+    src: "/images/rental/DK Living/kamar2.jpg",
+  },
+  {
+    id: 11,
+    src: "/images/rental/DK Living/teras.jpg",
+  },
+  {
+    id: 12,
+    src: "/images/rental/Griya Artha Prima/kamar3.webp",
+  },
+  {
+    id: 13,
+    src: "/images/rental/Griya Artha Prima/kamar4.webp",
+  },
+  {
+    id: 14,
+    src: "/images/rental/Griya Artha Prima/kamar6.webp",
+  },
+  {
+    id: 15,
+    src: "/images/rental/Griya Artha Prima/kamar8.webp",
+  },
+  {
+    id: 16,
+    src: "/images/rental/Griya Artha Prima/living1.webp",
   },
 ];
 
@@ -96,7 +124,7 @@ const ShuffleGrid = () => {
   };
 
   return (
-    <div className="order-1 grid h-[350px] w-full grid-cols-3 grid-rows-3 gap-1 sm:h-[450px] lg:order-2">
+    <div className="order-1 grid h-[350px] w-full grid-cols-4 grid-rows-4 gap-1 sm:h-[450px] lg:order-2">
       {squares.map((sq) => sq)}
     </div>
   );

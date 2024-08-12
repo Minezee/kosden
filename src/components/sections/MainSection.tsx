@@ -22,8 +22,8 @@ export default function MainSection() {
               </span>
             </h1>
             <p className="mt-2 text-black/70 lg:max-w-[500px] lg:text-lg">
-              Selamat datang di website KOSDEN, disini anda dapat mengeksplorasi
-              berbagai macam kos yang kami sediakan
+              Selamat datang!, Kosden merupakan penyedia kos - kosan khusus
+              putri yang terletak di kota Malang
             </p>
             <a
               href="#about"
@@ -32,15 +32,6 @@ export default function MainSection() {
               Explore
             </a>
           </div>
-
-          {/* <div className="relative order-1 h-[360px] w-full lg:order-2 lg:h-full">
-            <Image
-              className="object-contain saturate-150 duration-500 ease-in-out hover:rotate-3 hover:scale-105"
-              src="/images/hero.png"
-              alt="Hero"
-              fill
-            />
-          </div> */}
 
           <ShuffleGrid />
         </main>

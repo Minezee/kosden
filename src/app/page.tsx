@@ -1,7 +1,9 @@
 import NavigationBar from "@/components/navigations/NavigationBar";
-import AboutSection from "@/components/sections/AboutSection";
 import MainSection from "@/components/sections/MainSection";
+import AboutSection from "@/components/sections/AboutSection";
 import RentalPlaceSection from "@/components/sections/RentalPlaceSection";
+import ContactUsSection from "@/components/sections/ContactUsSection";
+import Footer from "@/components/navigations/Footer";
 
 export default function Home() {
   return (
@@ -10,6 +12,8 @@ export default function Home() {
       <MainSection />
       <AboutSection />
       <RentalPlaceSection />
+      <ContactUsSection />
+      <Footer />
     </>
   );
 }

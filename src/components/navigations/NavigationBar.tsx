@@ -10,19 +10,19 @@ import Link from "next/link";
 const navLinks = [
   {
     label: "Home",
-    href: "#home",
+    href: "/#home",
   },
   {
     label: "About",
-    href: "#about",
+    href: "/#about",
   },
   {
     label: "Location",
-    href: "#location",
+    href: "/#location",
   },
   {
     label: "Contact Us",
-    href: "#contactUs",
+    href: "/#contactUs",
   },
 ];
 
@@ -69,8 +69,8 @@ export default function NavigationBar() {
 
           <nav>
             <ul className="hidden items-center gap-x-10 lg:flex">
-              {navLinks.map((link) => (
-                <li className="group">
+              {navLinks.map((link, index) => (
+                <li key={index} className="group">
                   <a
                     href={link?.href}
                     className="underline decoration-[#ffab16]/0 decoration-2 underline-offset-4 duration-300 group-hover:decoration-[#ffab16]"
@@ -92,7 +92,7 @@ export default function NavigationBar() {
               strokeWidth="2"
               strokeLinecap="round"
               strokeLinejoin="round"
-              className="lucide lucide-bar-chart h-[24px] w-[24px] rotate-90 scale-y-[-1] text-black"
+              className="lucide lucide-bar-chart h-[24px] w-[24px] rotate-90 scale-y-[-1] text-[#8c6001]"
             >
               <line x1="12" x2="12" y1="20" y2="10" />
               <line x1="18" x2="18" y1="20" y2="4" />
@@ -108,18 +108,30 @@ export default function NavigationBar() {
           <>
             <motion.div className="fixed right-0 top-0 z-[300] block h-full w-full bg-[#0d0e18]/70 lg:hidden"></motion.div>
             <motion.div
-              className="fixed right-0 top-0 z-[300] flex h-full w-[80%] flex-col items-start justify-start bg-[#fafcff] px-4 py-4 backdrop-blur-md lg:hidden"
-              initial={{ opacity: 0 }}
+              className="fixed right-0 top-0 z-[300] flex h-full w-[80%] flex-col items-start justify-start bg-[#fff4dd] px-4 py-4 backdrop-blur-md lg:hidden"
+              initial={{ opacity: 0, x: "100%" }}
               animate={{
                 opacity: 1,
-                transition: { duration: 0.3, ease: "easeOut" },
+                x: "0%",
+                transition: {
+                  type: "spring",
+                  stiffness: 150,
+                  damping: 20,
+                  mass: 0.8,
+                },
               }}
               exit={{
                 opacity: 0,
-                transition: { duration: 0.3, ease: "easeOut" },
+                x: "100%",
+                transition: {
+                  type: "spring",
+                  stiffness: 150,
+                  damping: 20,
+                  mass: 0.8,
+                },
               }}
             >
-              <div className="mb-5 flex w-full items-center justify-between border-b border-gray-400/80 pb-[18px] pt-[10px]">
+              <div className="mb-5 flex w-full items-center justify-between border-b border-[#8c6001]/80 pb-[18px] pt-[10px]">
                 <button onClick={closeMobileNavigation} className="">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -131,7 +143,7 @@ export default function NavigationBar() {
                     strokeWidth="2"
                     strokeLinecap="round"
                     strokeLinejoin="round"
-                    className="lucide lucide-x text-black"
+                    className="lucide lucide-x text-[#8c6001]"
                   >
                     <path d="M18 6 6 18" />
                     <path d="m6 6 12 12" />
