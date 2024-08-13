@@ -65,8 +65,7 @@ export default function Footer() {
                 Ready to Stay with Us?
               </h2>
               <p className="mt-2 max-w-[700px] text-base text-[#d4cab4] lg:text-lg">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Inventore tenetur asperiores.
+                Thank you for choosing KOSDEN - Your home away from home!
               </p>
             </div>
             <Link

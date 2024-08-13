@@ -4,17 +4,20 @@ const aboutUsInfo = [
   {
     label: "Vision",
     icon: "/icons/vision.png",
-    description: "",
+    description:
+      "To be the preferred choice for modern living spaces that provide comfort, convenience, and a sense of community for students and young professionals.",
   },
   {
     label: "Mission",
     icon: "/icons/mission.png",
-    description: "",
+    description:
+      "To offer high-quality, affordable accommodations with excellent amenities, ensuring a safe and welcoming environment where our residents can thrive.",
   },
   {
     label: "Why Us",
     icon: "/icons/why-us.png",
-    description: "",
+    description:
+      "Choose KOSDEN for our commitment to quality, affordability, and a vibrant community atmosphere. We prioritize your comfort and convenience, making your living experience stress-free and enjoyable.",
   },
 ];
 
@@ -56,13 +59,7 @@ export default function AboutSection() {
                   <h3 className="text-2xl font-semibold text-black/80">
                     {info?.label}
                   </h3>
-                  {/* <p className="text-black/60">{info?.description}</p> */}
-                  <p className="text-black/60">
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                    Laborum cum molestias facilis inventore, ipsam
-                    necessitatibus suscipit ad earum eius consequuntur?
-                    Explicabo veritatis iure possimus vel.
-                  </p>
+                  <p className="text-black/60">{info?.description}</p>
                 </div>
               </div>
             ))}

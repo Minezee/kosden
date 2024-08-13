@@ -28,15 +28,18 @@ const socialMediaLinks = [
 const rentalPlaceLocations = [
   {
     name: "DK Living",
-    googleMapURL: "https://maps.app.goo.gl/QNaBbtUt1x2tSGkZ9",
+    googleMapURL:
+      "https://maps.app.goo.gl/vwMV9xhtP3ACKiN56?g_st=com.google.maps.preview.copy",
   },
   {
     name: "Griya Artha Prima",
-    googleMapURL: "https://maps.app.goo.gl/UmPTp1NYG6CXQN2b9",
+    googleMapURL:
+      "https://maps.app.goo.gl/EVcUeFF5xRxJV96Z6?g_st=com.google.maps.preview.copy",
   },
   {
     name: "Maliqa",
-    googleMapURL: "https://maps.app.goo.gl/fCXrQv61jiD8CyoP7",
+    googleMapURL:
+      "https://maps.app.goo.gl/CYrfp3RTRZ3RJGA19?g_st=com.google.maps.preview.copy",
   },
 ];
 
@@ -105,15 +108,26 @@ export default function ContactUsSection() {
             </div>
             <div className="grid w-full grid-cols-1 grid-rows-1">
               <div className="col-span-1 row-span-1 flex h-full w-full items-center justify-center rounded-xl border border-[#754a00]/20 bg-[#ffeeca] p-7 shadow-none transition-all hover:translate-x-[-5px] hover:translate-y-[-5px] hover:shadow-[5px_5px_0px_#8c6001]">
-                <p className="text-lg">
-                  Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-                  Accusantium nihil architecto vel eos officia voluptatibus iure
-                  blanditiis quia reprehenderit eaque laborum, quae aperiam,
-                  nobis similique adipisci consequuntur in facere natus
-                  repudiandae impedit dolorum. Sit, impedit possimus explicabo
-                  atque adipisci qui eaque id nisi laborum tempora, similique
-                  voluptatem deserunt. Voluptatem, rem.
+                <p className="text-lg sm:text-xl">
+                  Selamat datang di KOSDEN, hunian nyaman dan aman khusus putri
+                  di kota Malang! Terletak strategis dekat berbagai Universitas
+                  ternama seperti{" "}
+                  <span className="font-medium text-[#ad6e00]">
+                    Universitas Brawijaya
+                  </span>
+                  ,{" "}
+                  <span className="font-medium text-[#ad6e00]">
+                    Universitas Negeri Malang
+                  </span>
+                  , dan{" "}
+                  <span className="font-medium text-[#ad6e00]">
+                    Politeknik Negeri Malang
+                  </span>
+                  , KOSDEN adalah pilihan tepat untuk Anda yang menginginkan
+                  lingkungan belajar yang mendukung dengan fasilitas lengkap.
+                  Mari bergabung dan nikmati kemudahan hidup di KOSDEN!
                 </p>
+                {/* <span className="text-[#754a00]"></span> */}
               </div>
             </div>
             <div className="grid w-full grid-rows-1 gap-4 md:grid-cols-3">

@@ -22,8 +22,8 @@ export default function MainSection() {
               </span>
             </h1>
             <p className="mt-2 text-black/70 lg:max-w-[500px] lg:text-lg">
-              Selamat datang!, Kosden merupakan penyedia kos - kosan khusus
-              putri yang terletak di kota Malang
+              Tempat tinggal nyaman dan modern yang siap menemani keseharian
+              Anda dan terletak di kota Malang
             </p>
             <a
               href="#about"
