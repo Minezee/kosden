@@ -1,3 +1,6 @@
+"use client";
+
+import { useRouter } from "next/navigation";
 import Image from "next/image";
 import Link from "next/link";
 
@@ -6,20 +9,25 @@ const rentalPlaces = [
     name: "DK Living",
     imageURL: "/images/rental/1. Kos DK Living.jpg",
     location: "Jalan Soekarno Hatta Indah V no.7B",
+    url: "/rental/dk-living",
   },
   {
     name: "Griya Artha Prima",
     imageURL: "/images/rental/2. Kos Griya Artha Prima.jpg",
     location: "Jalan Candi Mendut Barat Blok C no.16",
+    url: "/rental/griya-artha-prima",
   },
   {
     name: "Maliqa",
     imageURL: "/images/rental/3. Kos Maliqa.jpg",
     location: "Jalan Candi Mendut Selatan III no.18",
+    url: "/rental/maliqa",
   },
 ];
 
 export default function RentalPlaceSection() {
+  const router = useRouter();
+
   return (
     <section id="location" className="w-full py-16 lg:py-20">
       <div className="custom__container">
@@ -42,6 +50,7 @@ export default function RentalPlaceSection() {
           <div className="grid w-full grid-cols-1 gap-x-8 gap-y-6 lg:grid-cols-3">
             {rentalPlaces?.map((info, index) => (
               <div
+                onClick={() => router.push(info?.url)}
                 className="group relative col-span-1 flex h-[320px] w-full cursor-pointer flex-col gap-y-4 overflow-hidden rounded-xl bg-[#ffeeca] p-7 sm:h-[460px]"
                 key={info?.name + index}
               >
@@ -51,7 +60,6 @@ export default function RentalPlaceSection() {
                   fill
                   className="object-cover saturate-150 duration-500 ease-in-out group-hover:rotate-2 group-hover:scale-110"
                 />
-                {/*  */}
                 <div className="absolute bottom-0 left-0 h-auto w-full translate-y-[100%] bg-gradient-to-t from-[#ffeeca] to-black/0 p-3 duration-500 ease-in-out group-hover:translate-y-[0%]">
                   <div className="flex h-full w-full flex-col justify-end gap-y-5 rounded-lg bg-[#241503] p-4 backdrop-blur-md">
                     <div className="flex w-full items-center justify-between">
@@ -59,7 +67,7 @@ export default function RentalPlaceSection() {
                         Click to see more details
                       </span>
                       <Link
-                        href={"/kost/"}
+                        href={info?.url}
                         className="flex h-12 w-12 items-center justify-center rounded-full bg-[#ffeeca]"
                       >
                         <svg
