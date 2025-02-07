@@ -1,18 +1,32 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
+import { Swiper, SwiperSlide } from "swiper/react";
+import { FreeMode, Navigation, Thumbs } from "swiper/modules";
 import Image from "next/image";
 import Link from "next/link";
 import { FaCircleDot } from "react-icons/fa6";
 import { MdDiamond } from "react-icons/md";
-import { Swiper, SwiperSlide } from "swiper/react";
-import "swiper/css";
 
 const rentalPlaceDetails = {
   "dk-living": {
     name: "DK Living",
     address: "Jalan Soekarno Hatta Indah V no.7B",
     heroImage: "/images/rental/1. Kos DK Living.jpg",
+    images: [
+      "/images/rental/DK Living/kamar.jpg",
+      "/images/rental/DK Living/kamar2.jpg",
+      "/images/rental/DK Living/kamar3.jpg",
+      "/images/rental/DK Living/kamar4.jpg",
+      "/images/rental/DK Living/kitchen.jpg",
+      "/images/rental/DK Living/laundry.jpg",
+      "/images/rental/DK Living/living.jpg",
+      "/images/rental/DK Living/living2.jpg",
+      "/images/rental/DK Living/main.jpg",
+      "/images/rental/DK Living/teras.jpg",
+      "/images/rental/DK Living/toilet.jpg",
+      "/images/rental/DK Living/toilet2.jpg",
+    ],
     googleMapURL:
       "https://maps.app.goo.gl/vwMV9xhtP3ACKiN56?g_st=com.google.maps.preview.copy",
     iframeSrc:
@@ -32,6 +46,13 @@ const rentalPlaceDetails = {
     name: "Griya Artha Prima",
     address: "Jalan Candi Mendut Barat Blok C no.16",
     heroImage: "/images/rental/2. Kos Griya Artha Prima.jpg",
+    images: [
+      "/images/rental/Griya Artha Prima/living1.webp",
+      "/images/rental/Griya Artha Prima/kamar3.webp",
+      "/images/rental/Griya Artha Prima/kamar4.webp",
+      "/images/rental/Griya Artha Prima/kamar6.webp",
+      "/images/rental/Griya Artha Prima/kamar8.webp",
+    ],
     googleMapURL:
       "https://maps.app.goo.gl/EVcUeFF5xRxJV96Z6?g_st=com.google.maps.preview.copy",
     iframeSrc:
@@ -51,6 +72,20 @@ const rentalPlaceDetails = {
     name: "Maliqa",
     address: "Jalan Candi Mendut Selatan III no.18",
     heroImage: "/images/rental/3. Kos Maliqa.jpg",
+    images: [
+      "/images/rental/Maliqa/hall.jpg",
+      "/images/rental/Maliqa/kamar.jpg",
+      "/images/rental/Maliqa/kamar2.jpg",
+      "/images/rental/Maliqa/kamar3.jpg",
+      "/images/rental/Maliqa/kamar4.jpg",
+      "/images/rental/Maliqa/kitchen.jpg",
+      "/images/rental/Maliqa/main.jpg",
+      "/images/rental/Maliqa/tangga.jpg",
+      "/images/rental/Maliqa/tangga2.jpg",
+      "/images/rental/Maliqa/main.jpg",
+      "/images/rental/Maliqa/teras.jpg",
+      "/images/rental/Maliqa/toilet.jpg",
+    ],
     googleMapURL:
       "https://maps.app.goo.gl/CYrfp3RTRZ3RJGA19?g_st=com.google.maps.preview.copy",
     iframeSrc:
@@ -73,7 +108,17 @@ export default function RentalDetailHeroSection({
 }: {
   rentalPlaceName: "dk-living" | "griya-artha-prima" | "maliqa";
 }) {
+  const [thumbsSwiper, setThumbsSwiper] = useState(null);
   const [roomVariant, setRoomVariant] = useState<"basic" | "premium">("basic");
+
+  const [width, setWidth] = useState<undefined | number>(undefined);
+
+  useEffect(() => {
+    const handleResize = () => setWidth(window.innerWidth);
+    window.addEventListener("resize", handleResize);
+
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
 
   return (
     <section className="w-full py-4 lg:py-16">
@@ -90,7 +135,89 @@ export default function RentalDetailHeroSection({
               </h2>
               <span className="mt-2 block h-2 w-24 bg-gradient-to-r from-[#754a00] to-[#db8a00]"></span>
             </div>
-            <div className="relative mt-8 aspect-square h-[450px] w-full overflow-hidden rounded-xl">
+
+            <div className="mt-8 flex w-full flex-col gap-y-3">
+              <div className="relative w-full">
+                <Swiper
+                  style={{
+                    // @ts-ignore
+                    "--swiper-navigation-color": "#fff",
+                    "--swiper-pagination-color": "#fff",
+                  }}
+                  loop={true}
+                  spaceBetween={10}
+                  navigation={true}
+                  thumbs={{ swiper: thumbsSwiper }}
+                  modules={[FreeMode, Navigation, Thumbs]}
+                  className="!h-[375px] md:!h-[450px]"
+                >
+                  <SwiperSlide>
+                    <div className="relative aspect-auto h-full w-full overflow-hidden rounded-lg">
+                      <Image
+                        src={rentalPlaceDetails[rentalPlaceName]["heroImage"]}
+                        alt="Hero Image"
+                        fill
+                        className="object-cover object-center saturate-200"
+                        quality={100}
+                      />
+                    </div>
+                  </SwiperSlide>
+                  {rentalPlaceDetails[rentalPlaceName]["images"].map(
+                    (image) => (
+                      <SwiperSlide>
+                        <div className="relative aspect-auto h-full w-full overflow-hidden rounded-lg">
+                          <Image
+                            src={image}
+                            alt="Hero Image"
+                            fill
+                            className="object-cover object-center saturate-200"
+                            quality={100}
+                          />
+                        </div>
+                      </SwiperSlide>
+                    ),
+                  )}
+                </Swiper>
+              </div>
+
+              <Swiper
+                // @ts-ignore
+                onSwiper={setThumbsSwiper}
+                spaceBetween={10}
+                slidesPerView={width! > 768 ? 4.2 : width! > 480 ? 3.2 : 2.2}
+                freeMode={true}
+                watchSlidesProgress={true}
+                modules={[FreeMode, Navigation, Thumbs]}
+                className="childSwiper !h-[150px]"
+              >
+                <SwiperSlide>
+                  <div className="relative aspect-auto h-full w-full overflow-hidden rounded-lg">
+                    <Image
+                      src={rentalPlaceDetails[rentalPlaceName]["heroImage"]}
+                      alt="Hero Image"
+                      fill
+                      className="object-cover saturate-200"
+                      quality={100}
+                    />
+                  </div>
+                </SwiperSlide>
+                {rentalPlaceDetails[rentalPlaceName]["images"].map((image) => (
+                  <SwiperSlide>
+                    <div className="relative aspect-auto h-full w-full overflow-hidden rounded-lg">
+                      <Image
+                        src={image}
+                        alt="Hero Image"
+                        fill
+                        className="object-cover object-center saturate-200"
+                        quality={100}
+                      />
+                    </div>
+                  </SwiperSlide>
+                ))}
+              </Swiper>
+            </div>
+
+            {/* <div className="relative mt-8 aspect-square h-[450px] w-full overflow-hidden rounded-xl">
               <Image
                 src={rentalPlaceDetails[rentalPlaceName]["heroImage"]}
                 alt={rentalPlaceDetails[rentalPlaceName]["name"]}
@@ -99,6 +226,60 @@ export default function RentalDetailHeroSection({
                 quality={100}
               />
             </div>
+
+            <div className="mt-4 flex h-[160px] w-full">
+              <Swiper
+                spaceBetween={20}
+                slidesPerView={2.5}
+                onSlideChange={() => console.log("")}
+                onSwiper={(swiper) => console.log(swiper)}
+              >
+                <SwiperSlide>
+                  <div className="relative aspect-auto h-full w-full overflow-hidden rounded-lg">
+                    <Image
+                      src={rentalPlaceDetails[rentalPlaceName]["heroImage"]}
+                      alt={rentalPlaceDetails[rentalPlaceName]["name"]}
+                      fill
+                      className="object-cover saturate-200"
+                      quality={100}
+                    />
+                  </div>
+                </SwiperSlide>
+                <SwiperSlide>
+                  <div className="relative aspect-auto h-full w-full overflow-hidden rounded-lg">
+                    <Image
+                      src={rentalPlaceDetails[rentalPlaceName]["heroImage"]}
+                      alt={rentalPlaceDetails[rentalPlaceName]["name"]}
+                      fill
+                      className="object-cover saturate-200"
+                      quality={100}
+                    />
+                  </div>
+                </SwiperSlide>
+                <SwiperSlide>
+                  <div className="relative aspect-auto h-full w-full overflow-hidden rounded-lg">
+                    <Image
+                      src={rentalPlaceDetails[rentalPlaceName]["heroImage"]}
+                      alt={rentalPlaceDetails[rentalPlaceName]["name"]}
+                      fill
+                      className="object-cover saturate-200"
+                      quality={100}
+                    />
+                  </div>
+                </SwiperSlide>
+                <SwiperSlide>
+                  <div className="relative aspect-auto h-full w-full overflow-hidden rounded-lg">
+                    <Image
+                      src={rentalPlaceDetails[rentalPlaceName]["heroImage"]}
+                      alt={rentalPlaceDetails[rentalPlaceName]["name"]}
+                      fill
+                      className="object-cover"
+                      quality={100}
+                    />
+                  </div>
+                </SwiperSlide>
+              </Swiper>
+            </div> */}
 
             <div className="mt-8 flex w-full flex-col gap-y-12">
               {/* Overview */}

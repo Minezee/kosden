@@ -29,7 +29,7 @@ const navLinks = [
 export default function NavigationBar() {
   // Mobile Configuration 📱
   const [showMobileNavigation, setShowMobileNavigation] =
-    useState<boolean>(true);
+    useState<boolean>(false);
   const openMobileNavigation = () => {
     setShowMobileNavigation((prev) => !prev);
     document.documentElement.style.overflowY = "hidden";
