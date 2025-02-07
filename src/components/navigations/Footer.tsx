@@ -109,7 +109,7 @@ export default function Footer() {
                 </div>
               </Link>
               <p className="mt-2 max-w-[350px] text-[15px] text-[#d4cab4]">
-                Kosden, penyedia kos - kosan putri di kota Malang yang nyaman
+                Kosden, penyedia kos - kosan di kota Malang yang nyaman
                 dan terjangkau.
               </p>
 
