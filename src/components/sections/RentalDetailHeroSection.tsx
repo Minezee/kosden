@@ -114,6 +114,8 @@ export default function RentalDetailHeroSection({
   const [width, setWidth] = useState<undefined | number>(undefined);
 
   useEffect(() => {
+    setWidth(window.innerWidth);
+
     const handleResize = () => setWidth(window.innerWidth);
     window.addEventListener("resize", handleResize);
 
