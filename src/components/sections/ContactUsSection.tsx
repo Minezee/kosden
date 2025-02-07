@@ -45,7 +45,7 @@ const rentalPlaceLocations = [
 
 export default function ContactUsSection() {
   return (
-    <section id="contactUs" className="w-full py-16 lg:py-20">
+    <section id="contactUs" className="w-full scroll-mt-16 py-16 lg:py-20">
       <div className="custom__container">
         <div className="relative flex h-auto w-full flex-col items-center justify-between gap-y-10 lg:gap-y-14">
           {/* Headers */}
@@ -109,9 +109,9 @@ export default function ContactUsSection() {
             <div className="grid w-full grid-cols-1 grid-rows-1">
               <div className="col-span-1 row-span-1 flex h-full w-full items-center justify-center rounded-xl border border-[#754a00]/20 bg-[#ffeeca] p-7 shadow-none transition-all hover:translate-x-[-5px] hover:translate-y-[-5px] hover:shadow-[5px_5px_0px_#8c6001]">
                 <p className="text-lg sm:text-xl">
-                  Selamat datang di KOSDEN, hunian nyaman dan aman
-                  di kota Malang! Terletak strategis dekat berbagai Universitas
-                  ternama seperti{" "}
+                  Selamat datang di KOSDEN, hunian nyaman dan aman di kota
+                  Malang! Terletak strategis dekat berbagai Universitas ternama
+                  seperti{" "}
                   <span className="font-medium text-[#ad6e00]">
                     Universitas Brawijaya
                   </span>

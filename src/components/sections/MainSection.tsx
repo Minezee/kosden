@@ -3,7 +3,7 @@ import ShuffleGrid from "../ui/ShuffleGrid";
 
 export default function MainSection() {
   return (
-    <section id="home" className="w-full py-12 lg:py-16">
+    <section id="home" className="w-full scroll-mt-20 py-12 lg:py-16">
       <div className="custom__container">
         <main className="relative flex h-auto w-full flex-col items-center justify-between gap-y-14 lg:flex-row">
           <div className="order-2 -mt-4 flex w-full flex-col items-center text-center lg:order-1 lg:items-start lg:text-start">

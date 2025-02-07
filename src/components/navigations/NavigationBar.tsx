@@ -29,7 +29,7 @@ const navLinks = [
 export default function NavigationBar() {
   // Mobile Configuration 📱
   const [showMobileNavigation, setShowMobileNavigation] =
-    useState<boolean>(false);
+    useState<boolean>(true);
   const openMobileNavigation = () => {
     setShowMobileNavigation((prev) => !prev);
     document.documentElement.style.overflowY = "hidden";
@@ -42,7 +42,7 @@ export default function NavigationBar() {
   return (
     <>
       <header
-        className={`sticky left-0 top-0 z-[300] w-full bg-[#fff4dd]/80 py-4 backdrop-blur-sm`}
+        className={`sticky left-0 top-0 z-[300] w-full bg-[#fff4dd]/80 py-4 backdrop-blur-md`}
       >
         <nav className="custom__container mx-auto flex items-center justify-between gap-x-8 py-2">
           <div className="flex w-fit items-center gap-x-10">
@@ -73,7 +73,7 @@ export default function NavigationBar() {
                 <li key={index} className="group">
                   <a
                     href={link?.href}
-                    className="underline decoration-[#ffab16]/0 decoration-2 underline-offset-4 duration-300 group-hover:decoration-[#ffab16]"
+                    className="text-lg underline decoration-[#ffab16]/0 decoration-2 underline-offset-4 duration-300 group-hover:decoration-[#ffab16]"
                   >
                     {link?.label}
                   </a>
@@ -106,7 +106,12 @@ export default function NavigationBar() {
       <AnimatePresence>
         {showMobileNavigation && (
           <>
-            <motion.div className="fixed right-0 top-0 z-[300] block h-full w-full bg-[#0d0e18]/70 lg:hidden"></motion.div>
+            <motion.div
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              exit={{ opacity: 0 }}
+              className="fixed right-0 top-0 z-[300] block h-full w-full bg-[#0d0e18]/70 lg:hidden"
+            ></motion.div>
             <motion.div
               className="fixed right-0 top-0 z-[300] flex h-full w-[80%] flex-col items-start justify-start bg-[#fff4dd] px-4 py-4 backdrop-blur-md lg:hidden"
               initial={{ opacity: 0, x: "100%" }}
@@ -130,13 +135,14 @@ export default function NavigationBar() {
                   mass: 0.8,
                 },
               }}
+              transition={{ delay: 500 }}
             >
-              <div className="mb-5 flex w-full items-center justify-between border-b border-[#8c6001]/80 pb-[18px] pt-[10px]">
+              <div className="mb-5 flex w-full items-center justify-between border-b border-[#8c6001]/80 pb-[18px] pt-2">
                 <button onClick={closeMobileNavigation} className="">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
-                    width="24"
-                    height="24"
+                    width="26"
+                    height="26"
                     viewBox="0 0 24 24"
                     fill="none"
                     stroke="currentColor"
@@ -150,10 +156,26 @@ export default function NavigationBar() {
                   </svg>
                 </button>
 
-                <div className="relative aspect-square w-[30px]">
+                <div className="relative aspect-square w-8">
                   <Image src="/logo.png" alt="Logo" fill />
                 </div>
               </div>
+
+              <nav className="w-full">
+                <ul className="flex flex-col gap-y-1">
+                  {navLinks.map((link, index) => (
+                    <li key={index} className="group">
+                      <a
+                        href={link?.href}
+                        onClick={closeMobileNavigation}
+                        className="flex w-full items-center justify-center py-4 text-lg underline decoration-[#ffab16]/0 decoration-2 underline-offset-4 duration-300 group-hover:decoration-[#ffab16]"
+                      >
+                        {link?.label}
+                      </a>
+                    </li>
+                  ))}
+                </ul>
+              </nav>
             </motion.div>
           </>
         )}

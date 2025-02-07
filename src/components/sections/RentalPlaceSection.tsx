@@ -29,7 +29,7 @@ export default function RentalPlaceSection() {
   const router = useRouter();
 
   return (
-    <section id="location" className="w-full py-16 lg:py-20">
+    <section id="location" className="w-full scroll-mt-16 py-16 lg:py-20">
       <div className="custom__container">
         <div className="relative flex h-auto w-full flex-col items-center justify-between gap-y-10 lg:gap-y-14">
           {/* Headers */}
