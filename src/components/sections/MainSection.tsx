@@ -15,19 +15,19 @@ export default function MainSection() {
                 className="animate__swing saturate-200"
               />
             </div>
-            <h1 className="text-5xl font-bold text-black/80 lg:text-[68px] lg:leading-[68px]">
+            <h1 className="text-5xl font-bold text-[#584015] lg:text-[68px] lg:leading-[68px]">
               WELCOME TO{" "}
               <span className="bg-gradient-to-r from-[#754a00] to-[#db8a00] bg-clip-text text-transparent">
                 KOSDEN
               </span>
             </h1>
-            <p className="mt-2 text-black/70 lg:max-w-[500px] lg:text-lg">
+            <p className="mt-2 text-[#584015]/80 lg:max-w-[500px] lg:text-lg">
               Tempat tinggal nyaman dan modern yang siap menemani keseharian
               Anda dan terletak di kota Malang
             </p>
             <a
               href="#about"
-              className="mt-5 w-fit rounded-md bg-[#db8a00] px-8 py-2.5 font-medium text-white shadow-[3px_3px_0px_black] transition-all hover:translate-x-[3px] hover:translate-y-[3px] hover:shadow-none lg:text-lg"
+              className="mt-5 w-fit rounded-md bg-[#db8a00] px-8 py-2.5 font-medium text-white shadow-[3px_3px_0px_#584015] transition-all hover:translate-x-[3px] hover:translate-y-[3px] hover:shadow-none lg:text-lg"
             >
               Explore
             </a>

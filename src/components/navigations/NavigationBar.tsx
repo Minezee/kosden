@@ -73,7 +73,7 @@ export default function NavigationBar() {
                 <li key={index} className="group">
                   <a
                     href={link?.href}
-                    className="text-lg underline decoration-[#ffab16]/0 decoration-2 underline-offset-4 duration-300 group-hover:decoration-[#ffab16]"
+                    className="text-lg text-[#584015] underline decoration-[#ffab16]/0 decoration-2 underline-offset-4 duration-300 group-hover:decoration-[#ffab16]"
                   >
                     {link?.label}
                   </a>
@@ -168,7 +168,7 @@ export default function NavigationBar() {
                       <a
                         href={link?.href}
                         onClick={closeMobileNavigation}
-                        className="flex w-full items-center justify-center py-4 text-lg underline decoration-[#ffab16]/0 decoration-2 underline-offset-4 duration-300 group-hover:decoration-[#ffab16]"
+                        className="flex w-full items-center justify-center py-4 text-lg text-[#584015] underline decoration-[#ffab16]/0 decoration-2 underline-offset-4 duration-300 group-hover:decoration-[#ffab16]"
                       >
                         {link?.label}
                       </a>

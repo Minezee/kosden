@@ -3,6 +3,8 @@
 import { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
+import { FaCircleDot } from "react-icons/fa6";
+import { MdDiamond } from "react-icons/md";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 
@@ -80,7 +82,7 @@ export default function RentalDetailHeroSection({
           {/* Main Content */}
           <div className="order-2 col-span-1 flex w-full flex-col items-start text-start lg:order-1 lg:col-span-3">
             <div className="text-start">
-              <h2 className="text-4xl font-bold text-black/80 lg:text-5xl">
+              <h2 className="text-4xl font-bold text-[#584015] lg:text-5xl">
                 Rental Place -{" "}
                 <span className="bg-gradient-to-r from-[#754a00] to-[#db8a00] bg-clip-text text-transparent">
                   {rentalPlaceDetails[rentalPlaceName]["name"]}
@@ -101,10 +103,10 @@ export default function RentalDetailHeroSection({
             <div className="mt-8 flex w-full flex-col gap-y-12">
               {/* Overview */}
               <div className="text-start">
-                <h3 className="text-3xl font-semibold text-black/80">
+                <h3 className="text-3xl font-semibold text-[#584015]">
                   Overview
                 </h3>
-                <p className="mt-2 w-full text-black/70 lg:text-lg">
+                <p className="mt-2 w-full text-[#584015]/80 lg:text-lg">
                   Lorem ipsum, dolor sit amet consectetur adipisicing elit.
                   Inventore laboriosam quo voluptate, illum quis officiis ipsa
                   ducimus quae eaque error eius corporis perferendis.
@@ -117,10 +119,10 @@ export default function RentalDetailHeroSection({
 
               {/* Facility */}
               <div className="text-start">
-                <h3 className="text-3xl font-semibold text-black/80">
+                <h3 className="text-3xl font-semibold text-[#584015]">
                   Facility
                 </h3>
-                <p className="mt-2 w-full text-black/70 lg:text-lg">
+                <p className="mt-2 w-full text-[#584015]/80 lg:text-lg">
                   Lorem ipsum, dolor sit amet consectetur adipisicing elit.
                   Inventore laboriosam quo voluptate, illum quis officiis ipsa
                   ducimus quae eaque error eius corporis perferendis.
@@ -133,7 +135,7 @@ export default function RentalDetailHeroSection({
 
               {/* Location */}
               <div className="text-start">
-                <h3 className="text-3xl font-semibold text-black/80">
+                <h3 className="text-3xl font-semibold text-[#584015]">
                   Location
                 </h3>
                 <iframe
@@ -155,36 +157,37 @@ export default function RentalDetailHeroSection({
 
           {/* Navigation */}
           <div className="order-1 col-span-1 flex h-fit w-full flex-col gap-y-4 rounded-xl border border-[#754a00]/20 bg-[#ffeeca] p-6 lg:order-2 lg:col-span-2">
-            <div>
-              <h3 className="text-xl font-semibold text-black/80">
-                Room Choices
-              </h3>
+            <div className="-mt-1">
+              <h3 className="text-2xl font-semibold text-[#584015]">Choices</h3>
 
               <div className="relative mt-2 flex w-full items-center gap-x-3 rounded-lg border-2 border-[#754a00]/20 bg-[#ffeeca] p-1">
                 <button
                   type="button"
                   onClick={() => setRoomVariant("basic")}
-                  className={`w-full rounded-md py-2 duration-500 ease-out ${roomVariant === "basic" ? "bg-[#7c5424] text-[#ffeeca]" : "bg-transparent"}`}
+                  className={`flex w-full items-center justify-center gap-x-2 rounded-md py-2 text-lg font-semibold duration-500 ease-out ${roomVariant === "basic" ? "bg-[#7c5424] text-[#ffeeca]" : "bg-transparent text-[#7c5424]"}`}
                 >
                   Basic
+                  <FaCircleDot className="text-base" />
                 </button>
                 {/* Separator */}
                 <div className="absolute left-1/2 top-1/2 h-[80%] w-[1.5px] -translate-x-1/2 -translate-y-1/2 bg-[#754a00]/20"></div>
                 <button
                   type="button"
                   onClick={() => setRoomVariant("premium")}
-                  className={`w-full rounded-md py-2 duration-500 ease-out ${roomVariant === "premium" ? "bg-[#7c5424] text-[#ffeeca]" : "bg-transparent"}`}
+                  className={`flex w-full items-center justify-center gap-x-2 rounded-md py-2 text-lg font-semibold duration-500 ease-out ${roomVariant === "premium" ? "bg-[#7c5424] text-[#ffeeca]" : "bg-transparent text-[#7c5424]"}`}
                 >
                   Premium
+                  <MdDiamond className="text-lg" />
                 </button>
               </div>
             </div>
-            <div>
-              <h3 className="text-xl font-semibold text-black/80">
-                Room Price
-              </h3>
 
-              <span className="text-xl font-semibold text-[#ad6e00]">
+            <div className="h-[1px] w-full bg-[#754a00]/20"></div>
+
+            <div>
+              <h3 className="text-xl font-semibold text-[#584015]">Price</h3>
+
+              <span className="text-2xl font-semibold text-[#ad6e00]">
                 Rp{" "}
                 {rentalPlaceDetails[rentalPlaceName]["roomVariant"][
                   roomVariant
@@ -193,7 +196,7 @@ export default function RentalDetailHeroSection({
             </div>
             <Link
               href={"#"}
-              className="mt-2 w-full rounded-md bg-[#7c5424] px-8 py-2.5 text-center font-medium text-white shadow-[3px_3px_0px_#4a3112] transition-all hover:translate-x-[3px] hover:translate-y-[3px] hover:shadow-none lg:text-lg"
+              className="mt-2 w-full rounded-md bg-[#7c5424] px-8 py-2.5 text-center font-medium text-white transition-all duration-300 hover:bg-[#63431d] lg:text-lg"
             >
               Book Room Now
             </Link>

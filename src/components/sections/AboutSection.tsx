@@ -29,12 +29,12 @@ export default function AboutSection() {
           {/* Headers */}
           <div className="flex w-full flex-col items-start justify-between gap-y-6 lg:flex-row lg:items-center">
             <div className="w-full max-w-[450px]">
-              <h2 className="text-4xl font-bold text-black/80 lg:text-5xl lg:leading-[52px]">
+              <h2 className="text-4xl font-bold text-[#584015] lg:text-5xl lg:leading-[52px]">
                 Your Trusted Rental Room Provider
               </h2>
               <span className="mt-2 block h-2 w-24 bg-gradient-to-r from-[#754a00] to-[#db8a00]"></span>
             </div>
-            <p className="w-full max-w-[400px] text-black/70 lg:text-[17px]">
+            <p className="w-full max-w-[400px] text-[#584015]/80 lg:text-[17px]">
               Kenali lebih jauh tentang visi, misi, dan mengapa kami menjadi
               pilihan terbaik untuk kebutuhan hunian kos Anda.
             </p>
@@ -56,10 +56,10 @@ export default function AboutSection() {
                   />
                 </div>
                 <div>
-                  <h3 className="text-2xl font-semibold text-black/80">
+                  <h3 className="text-2xl font-semibold text-[#584015]">
                     {info?.label}
                   </h3>
-                  <p className="text-black/60">{info?.description}</p>
+                  <p className="text-[#584015]/70">{info?.description}</p>
                 </div>
               </div>
             ))}

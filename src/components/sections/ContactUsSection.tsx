@@ -51,12 +51,12 @@ export default function ContactUsSection() {
           {/* Headers */}
           <div className="flex w-full flex-col items-center justify-center gap-y-6">
             <div className="w-full">
-              <h2 className="text-center text-4xl font-bold text-black/80 lg:text-5xl lg:leading-[52px]">
+              <h2 className="text-center text-4xl font-bold text-[#584015] lg:text-5xl lg:leading-[52px]">
                 Our Contact Information
               </h2>
               <span className="mx-auto mt-2 block h-2 w-32 bg-gradient-to-r from-[#754a00] to-[#db8a00]"></span>
             </div>
-            <p className="w-full max-w-[500px] text-center text-black/70 lg:text-[17px]">
+            <p className="w-full max-w-[500px] text-center text-[#584015]/80 lg:text-[17px]">
               Kosden Siap Membantu Anda Menemukan Hunian yang Sesuai dengan
               Kebutuhan dan Kenyamanan Anda.
             </p>
@@ -74,7 +74,7 @@ export default function ContactUsSection() {
                     className="animate__swing saturate-200"
                   />
                 </div>
-                <h2 className="text-3xl font-semibold text-black/80">
+                <h2 className="text-3xl font-semibold text-[#584015]">
                   Hi, Kami adalah Kosden. Penyedia Kos - kosan di Kota Malang.
                 </h2>
                 <div className="mt-auto flex w-fit cursor-pointer items-center gap-x-1 border-b border-transparent duration-300 hover:border-[#754a00]">
@@ -108,7 +108,7 @@ export default function ContactUsSection() {
             </div>
             <div className="grid w-full grid-cols-1 grid-rows-1">
               <div className="col-span-1 row-span-1 flex h-full w-full items-center justify-center rounded-xl border border-[#754a00]/20 bg-[#ffeeca] p-7 shadow-none transition-all hover:translate-x-[-5px] hover:translate-y-[-5px] hover:shadow-[5px_5px_0px_#8c6001]">
-                <p className="text-lg sm:text-xl">
+                <p className="text-lg text-[#584015] sm:text-xl">
                   Selamat datang di KOSDEN, hunian nyaman dan aman di kota
                   Malang! Terletak strategis dekat berbagai Universitas ternama
                   seperti{" "}
