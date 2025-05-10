@@ -9,19 +9,19 @@ import { PiTiktokLogo } from "react-icons/pi";
 const socialMediaLinks = [
   {
     icon: <FaInstagram size={40} color={"#754a00"} />,
-    link: "https://www.instagram.com/kostden/",
+    link: "https://www.instagram.com/kosden_management/?hl=id",
   },
   {
     icon: <FaWhatsapp size={40} color={"#754a00"} />,
-    link: "https://www.instagram.com/kostden/",
+    link: "https://wa.me/6287786012862",
   },
   {
     icon: <MdOutlineMailOutline size={40} color={"#754a00"} />,
-    link: "https://www.instagram.com/kostden/",
+    link: "mailto:kosdenmanagement@gmail.com",
   },
   {
     icon: <PiTiktokLogo size={40} color={"#754a00"} strokeWidth={1.5} />,
-    link: "https://www.instagram.com/kostden/",
+    link: "https://www.tiktok.com/@kosdenmanagement",
   },
 ];
 
@@ -78,7 +78,7 @@ export default function ContactUsSection() {
                   Hi, Kami adalah Kosden. Penyedia Kos - kosan di Kota Malang.
                 </h2>
                 <div className="mt-auto flex w-fit cursor-pointer items-center gap-x-1 border-b border-transparent duration-300 hover:border-[#754a00]">
-                  <Link href={"https://wa.me"} className="text-[#754a00]">
+                  <Link href={"https://wa.me/6287786012862"} className="text-[#754a00]">
                     Hubungi Kami
                   </Link>
                   <svg
@@ -97,13 +97,15 @@ export default function ContactUsSection() {
                 </div>
               </div>
               {socialMediaLinks.map((item, index) => (
-                <div
+                <Link
+                  href={item?.link}
+                  target="_blank"
+                  rel="noopener noreferrer"
                   key={index}
-                  onClick={() => window.open(item?.link, "_blank")}
                   className="col-span-1 row-span-1 flex h-full w-full cursor-pointer items-center justify-center rounded-xl border border-[#754a00]/20 bg-[#ffeeca] p-7 shadow-none transition-all hover:translate-x-[-5px] hover:translate-y-[-5px] hover:shadow-[5px_5px_0px_#8c6001]"
                 >
                   {item.icon}
-                </div>
+                </Link>
               ))}
             </div>
             <div className="grid w-full grid-cols-1 grid-rows-1">
