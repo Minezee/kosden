@@ -3,6 +3,8 @@ export const rentalPlaceDetails = {
     name: "DK Living",
     address: "Jalan Soekarno Hatta Indah V no.7B",
     havePremium: true,
+    overview: "",
+    facility: "",
     googleMapURL:
       "https://maps.app.goo.gl/vwMV9xhtP3ACKiN56?g_st=com.google.maps.preview.copy",
     iframeSrc:
@@ -36,6 +38,9 @@ export const rentalPlaceDetails = {
   "griya-artha-prima": {
     name: "Griya Artha Prima",
     address: "Jalan Candi Mendut Barat Blok C no.16",
+    havePremium: true,
+    overview: "",
+    facility: "",
     googleMapURL:
       "https://maps.app.goo.gl/EVcUeFF5xRxJV96Z6?g_st=com.google.maps.preview.copy",
     iframeSrc:
@@ -62,6 +67,9 @@ export const rentalPlaceDetails = {
   maliqa: {
     name: "Maliqa",
     address: "Jalan Candi Mendut Selatan III no.18",
+    havePremium: true,
+    overview: "",
+    facility: "",
     googleMapURL:
       "https://maps.app.goo.gl/CYrfp3RTRZ3RJGA19?g_st=com.google.maps.preview.copy",
     iframeSrc:

@@ -196,13 +196,16 @@ export default function RentalDetailHeroSection({
                   Overview
                 </h3>
                 <p className="mt-2 w-full text-[#584015]/80 lg:text-lg">
-                  Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                  {rentalPlaceDetails[rentalPlaceName]?.overview
+                    ??
+                    `Lorem ipsum, dolor sit amet consectetur adipisicing elit.
                   Inventore laboriosam quo voluptate, illum quis officiis ipsa
                   ducimus quae eaque error eius corporis perferendis.
                   Consequuntur sequi voluptate, quod aperiam quasi, earum neque
                   velit doloribus eligendi inventore mollitia omnis quae eos
                   possimus illo sed hic nostrum! Animi atque accusantium
-                  praesentium quos excepturi?
+                  praesentium quos excepturi?`
+                  }
                 </p>
               </div>
 
@@ -212,13 +215,16 @@ export default function RentalDetailHeroSection({
                   Facility
                 </h3>
                 <p className="mt-2 w-full text-[#584015]/80 lg:text-lg">
-                  Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                  {rentalPlaceDetails[rentalPlaceName]?.facility
+                    ??
+                    `Lorem ipsum, dolor sit amet consectetur adipisicing elit.
                   Inventore laboriosam quo voluptate, illum quis officiis ipsa
                   ducimus quae eaque error eius corporis perferendis.
                   Consequuntur sequi voluptate, quod aperiam quasi, earum neque
                   velit doloribus eligendi inventore mollitia omnis quae eos
                   possimus illo sed hic nostrum! Animi atque accusantium
-                  praesentium quos excepturi?
+                  praesentium quos excepturi?`
+                  }
                 </p>
               </div>
 

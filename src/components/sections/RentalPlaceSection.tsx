@@ -70,7 +70,7 @@ export default function RentalPlaceSection() {
           </div>
           <div className="w-full">
             <Swiper
-              slidesPerView={1.5}
+              slidesPerView={2.5}
               spaceBetween={20}
               navigation={true}
               loop={true}
@@ -79,7 +79,7 @@ export default function RentalPlaceSection() {
               }}
               breakpoints={{
                 640: {
-                  slidesPerView: 1.5,
+                  slidesPerView: 2.5,
                 },
                 768: {
                   slidesPerView: 2.5,
