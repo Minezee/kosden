@@ -62,7 +62,7 @@ export default function RentalDetailHeroSection({
                   <SwiperSlide>
                     <div className="relative aspect-auto h-full w-full overflow-hidden rounded-lg">
                       <Image
-                        src={rentalPlaceDetails[rentalPlaceName]["heroImage"]}
+                        src={rentalPlaceDetails[rentalPlaceName]?.roomVariant?.[`${roomVariant}`]?.heroImage}
                         alt="Hero Image"
                         fill
                         className="object-cover object-center saturate-200"
@@ -70,7 +70,7 @@ export default function RentalDetailHeroSection({
                       />
                     </div>
                   </SwiperSlide>
-                  {rentalPlaceDetails[rentalPlaceName]?.roomVariant?.basic?.images.map(
+                  {rentalPlaceDetails[rentalPlaceName]?.roomVariant?.[`${roomVariant}`]?.images.map(
                     (image) => (
                       <SwiperSlide>
                         <div className="relative aspect-auto h-full w-full overflow-hidden rounded-lg">
@@ -101,7 +101,7 @@ export default function RentalDetailHeroSection({
                 <SwiperSlide>
                   <div className="relative aspect-auto h-full w-full overflow-hidden rounded-lg">
                     <Image
-                      src={rentalPlaceDetails[rentalPlaceName]["heroImage"]}
+                      src={rentalPlaceDetails[rentalPlaceName]?.roomVariant?.[`${roomVariant}`]?.heroImage}
                       alt="Hero Image"
                       fill
                       className="object-cover saturate-200"
@@ -109,7 +109,7 @@ export default function RentalDetailHeroSection({
                     />
                   </div>
                 </SwiperSlide>
-                {rentalPlaceDetails[rentalPlaceName]?.roomVariant?.basic?.images.map((image) => (
+                {rentalPlaceDetails[rentalPlaceName]?.roomVariant?.[`${roomVariant}`]?.images.map((image) => (
                   <SwiperSlide>
                     <div className="relative aspect-auto h-full w-full overflow-hidden rounded-lg">
                       <Image

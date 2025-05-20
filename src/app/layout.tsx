@@ -25,9 +25,9 @@ export const metadata: Metadata = {
   creator: "Kostden",
   generator: "Next.js",
   icons: {
-    icon: ["/favicon.ico?v=1"],
-    apple: ["/apple-touch-icon.png?v=1"],
-    shortcut: ["/apple-touch-icon.png?v=1"],
+    icon: ["/logo.png"],
+    apple: ["/logo.png"],
+    shortcut: ["/logo.png"],
   },
   manifest: "/site.webmanifest",
   metadataBase: new URL(`${process.env.NEXT_PUBLIC_MAIN_URL}`),

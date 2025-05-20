@@ -2,7 +2,6 @@ export const rentalPlaceDetails = {
   "dk-living": {
     name: "DK Living",
     address: "Jalan Soekarno Hatta Indah V no.7B",
-    heroImage: "/images/rental/1. Kos DK Living.jpg",
     havePremium: true,
     googleMapURL:
       "https://maps.app.goo.gl/vwMV9xhtP3ACKiN56?g_st=com.google.maps.preview.copy",
@@ -10,6 +9,7 @@ export const rentalPlaceDetails = {
       "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3951.567996940178!2d112.62905200000002!3d-7.940104199999999!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2dd629004b1682c3%3A0xd3da99b14fbc5da0!2sKos%20DK%20Living!5e0!3m2!1sid!2sid!4v1723539731492!5m2!1sid!2sid",
     roomVariant: {
       basic: {
+        heroImage: "/images/rental/1. Kos DK Living.jpg",
         price: 1750000,
         images: [
           "/images/rental/DK Living/kamar.jpg",
@@ -27,6 +27,7 @@ export const rentalPlaceDetails = {
         ],
       },
       premium: {
+        heroImage: "/images/rental/DK Living/kamar2.jpg",
         price: 1900000,
         images: [],
       },
@@ -35,13 +36,13 @@ export const rentalPlaceDetails = {
   "griya-artha-prima": {
     name: "Griya Artha Prima",
     address: "Jalan Candi Mendut Barat Blok C no.16",
-    heroImage: "/images/rental/2. Kos Griya Artha Prima.jpg",
     googleMapURL:
       "https://maps.app.goo.gl/EVcUeFF5xRxJV96Z6?g_st=com.google.maps.preview.copy",
     iframeSrc:
       "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3951.57589782013!2d112.62708239999999!3d-7.939282800000001!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2dd629004d8bf979%3A0x37866423df988c0c!2sKos%20Griya%20Artha%20Prima%20Malang!5e0!3m2!1sid!2sid!4v1723540243392!5m2!1sid!2sid",
     roomVariant: {
       basic: {
+        heroImage: "/images/rental/2. Kos Griya Artha Prima.jpg",
         price: 1800000,
         images: [
           "/images/rental/Griya Artha Prima/living1.webp",
@@ -52,6 +53,7 @@ export const rentalPlaceDetails = {
         ],
       },
       premium: {
+        heroImage: "/images/rental/Griya Artha Prima/kamar3.webp",
         price: 2200000,
         images: [],
       },
@@ -60,13 +62,13 @@ export const rentalPlaceDetails = {
   maliqa: {
     name: "Maliqa",
     address: "Jalan Candi Mendut Selatan III no.18",
-    heroImage: "/images/rental/3. Kos Maliqa.jpg",
     googleMapURL:
       "https://maps.app.goo.gl/CYrfp3RTRZ3RJGA19?g_st=com.google.maps.preview.copy",
     iframeSrc:
       "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3951.522584325976!2d112.6344144!3d-7.944823800000001!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2dd6290070dc6c6f%3A0xdd1944dfc2772cd5!2sKos%20Maliqa%20Malang!5e0!3m2!1sid!2sid!4v1723540300394!5m2!1sid!2sid",
     roomVariant: {
       basic: {
+        heroImage: "/images/rental/3. Kos Maliqa.jpg",
         price: 1500000,
         images: [
           "/images/rental/Maliqa/hall.jpg",
@@ -84,6 +86,7 @@ export const rentalPlaceDetails = {
         ],
       },
       premium: {
+        heroImage: "/images/rental/Maliqa/kamar3.jpg",
         price: 1650000,
         images: [],
       },

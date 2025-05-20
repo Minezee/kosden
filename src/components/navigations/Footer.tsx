@@ -37,19 +37,19 @@ const footerLinks = {
   socialMedia: [
     {
       label: "Instagram",
-      href: "/#",
+      href: "https://www.instagram.com/kosden_management/?hl=id",
     },
     {
       label: "WhatsApp",
-      href: "/#",
+      href: "https://wa.me/6287786012862",
     },
     {
       label: "Gmail",
-      href: "/#",
+      href: "mailto:kosdenmanagement@gmail.com",
     },
     {
       label: "TikTok",
-      href: "/#",
+      href: "https://www.tiktok.com/@kosdenmanagement",
     },
   ],
 };
