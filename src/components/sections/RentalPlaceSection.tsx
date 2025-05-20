@@ -70,7 +70,7 @@ export default function RentalPlaceSection() {
           </div>
           <div className="w-full">
             <Swiper
-              slidesPerView={1}
+              slidesPerView={1.5}
               spaceBetween={20}
               navigation={true}
               loop={true}
