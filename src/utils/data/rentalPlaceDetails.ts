@@ -177,8 +177,8 @@ export const rentalPlaceDetails = {
         "overview": "",
         "facility": "",
         "location": "Jl. Graha Agung Tectona no.17",
-        "googleMapURL": "",
-        "iframeSrc": "",
+        "googleMapURL": "https://maps.app.goo.gl/9Rc5qEQEJcMyLgPWA",
+        "iframeSrc": "https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d3951.5159024562663!2d112.59006877500663!3d-7.94551799207878!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zN8KwNTYnNDMuOSJTIDExMsKwMzUnMzMuNSJF!5e0!3m2!1sid!2sid!4v1748920578716!5m2!1sid!2sid",
         "roomVariant": {
             "basic": {
                 "heroImage": "/images/rental/Dikost Putra/dikost-putra-23.jpeg",
