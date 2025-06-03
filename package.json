@@ -6,14 +6,18 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "generate:rental": "scripts/generateRentalPlaceDetails.ts"
   },
   "dependencies": {
     "framer-motion": "^11.3.21",
+    "heic-convert": "^2.1.0",
     "next": "14.2.5",
     "react": "^18",
     "react-dom": "^18",
     "react-icons": "^5.2.1",
+    "sharp": "^0.34.2",
+    "slugify": "^1.6.6",
     "swiper": "^11.1.9"
   },
   "devDependencies": {

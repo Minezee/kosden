@@ -62,7 +62,7 @@ export default function RentalDetailHeroSection({
                   <SwiperSlide>
                     <div className="relative aspect-auto h-full w-full overflow-hidden rounded-lg">
                       <Image
-                        src={rentalPlaceDetails[rentalPlaceName]?.roomVariant?.[`${roomVariant}`]?.heroImage}
+                        src={rentalPlaceDetails[rentalPlaceName]?.roomVariant?.[`basic`]?.heroImage}
                         alt="Hero Image"
                         fill
                         className="object-cover object-center saturate-200"
@@ -70,7 +70,7 @@ export default function RentalDetailHeroSection({
                       />
                     </div>
                   </SwiperSlide>
-                  {rentalPlaceDetails[rentalPlaceName]?.roomVariant?.[`${roomVariant}`]?.images.map(
+                  {rentalPlaceDetails[rentalPlaceName]?.roomVariant?.[`basic`]?.images.map(
                     (image) => (
                       <SwiperSlide>
                         <div className="relative aspect-auto h-full w-full overflow-hidden rounded-lg">
@@ -101,7 +101,7 @@ export default function RentalDetailHeroSection({
                 <SwiperSlide>
                   <div className="relative aspect-auto h-full w-full overflow-hidden rounded-lg">
                     <Image
-                      src={rentalPlaceDetails[rentalPlaceName]?.roomVariant?.[`${roomVariant}`]?.heroImage}
+                      src={rentalPlaceDetails[rentalPlaceName]?.roomVariant?.[`basic`]?.heroImage}
                       alt="Hero Image"
                       fill
                       className="object-cover saturate-200"
@@ -109,7 +109,7 @@ export default function RentalDetailHeroSection({
                     />
                   </div>
                 </SwiperSlide>
-                {rentalPlaceDetails[rentalPlaceName]?.roomVariant?.[`${roomVariant}`]?.images.map((image) => (
+                {rentalPlaceDetails[rentalPlaceName]?.roomVariant?.[`basic`]?.images.map((image) => (
                   <SwiperSlide>
                     <div className="relative aspect-auto h-full w-full overflow-hidden rounded-lg">
                       <Image
@@ -235,19 +235,22 @@ export default function RentalDetailHeroSection({
                 <h3 className="text-3xl font-semibold text-[#584015]">
                   Location
                 </h3>
-                <iframe
-                  src={rentalPlaceDetails[rentalPlaceName]["iframeSrc"]}
-                  width="100%"
-                  height="450"
-                  style={{
-                    marginTop: "20px",
-                    border: "1px solid rgba(117, 74, 0, 0.2)",
-                    borderRadius: "16px",
-                  }}
-                  allowFullScreen={true}
-                  loading="lazy"
-                  referrerPolicy="no-referrer-when-downgrade"
-                ></iframe>
+                <p className="mt-2 w-full text-[#584015]/80 lg:text-lg">{rentalPlaceDetails[rentalPlaceName]?.location}</p>
+                {rentalPlaceDetails[rentalPlaceName]?.iframeSrc &&
+                  <iframe
+                    src={rentalPlaceDetails[rentalPlaceName]["iframeSrc"]}
+                    width="100%"
+                    height="450"
+                    style={{
+                      marginTop: "20px",
+                      border: "1px solid rgba(117, 74, 0, 0.2)",
+                      borderRadius: "16px",
+                    }}
+                    allowFullScreen={true}
+                    loading="lazy"
+                    referrerPolicy="no-referrer-when-downgrade"
+                  ></iframe>
+                }
               </div>
             </div>
           </div>
@@ -267,15 +270,19 @@ export default function RentalDetailHeroSection({
                   <FaCircleDot className="text-base" />
                 </button>
                 {/* Separator */}
-                <div className="absolute left-1/2 top-1/2 h-[80%] w-[1.5px] -translate-x-1/2 -translate-y-1/2 bg-[#754a00]/20"></div>
-                <button
-                  type="button"
-                  onClick={() => setRoomVariant("premium")}
-                  className={`flex w-full items-center justify-center gap-x-2 rounded-md py-2 text-lg font-semibold duration-500 ease-out ${roomVariant === "premium" ? "bg-[#7c5424] text-[#ffeeca]" : "bg-transparent text-[#7c5424]"}`}
-                >
-                  Premium
-                  <MdDiamond className="text-lg" />
-                </button>
+                {rentalPlaceDetails[rentalPlaceName]?.havePremium &&
+                  <>
+                    <div className="absolute left-1/2 top-1/2 h-[80%] w-[1.5px] -translate-x-1/2 -translate-y-1/2 bg-[#754a00]/20"></div>
+                    <button
+                      type="button"
+                      onClick={() => setRoomVariant("premium")}
+                      className={`flex w-full items-center justify-center gap-x-2 rounded-md py-2 text-lg font-semibold duration-500 ease-out ${roomVariant === "premium" ? "bg-[#7c5424] text-[#ffeeca]" : "bg-transparent text-[#7c5424]"}`}
+                    >
+                      Premium
+                      <MdDiamond className="text-lg" />
+                    </button>
+                  </>
+                }
               </div>
             </div>
 
@@ -292,7 +299,7 @@ export default function RentalDetailHeroSection({
               </span>
             </div>
             <Link
-              href={`https://wa.me/6287786012862?text=Apakah%20kamar%20${rentalPlaceDetails[rentalPlaceName]}%20${roomVariant}%20masih%20tersedia%3F`}
+              href={`https://wa.me/6287786012862?text=Apakah%20kamar%20${rentalPlaceDetails[rentalPlaceName]?.name}%20${roomVariant}%20masih%20tersedia%3F`}
               target="_blank"
               className="mt-2 w-full rounded-md bg-[#7c5424] px-8 py-2.5 text-center font-medium text-white transition-all duration-300 hover:bg-[#63431d] lg:text-lg"
             >

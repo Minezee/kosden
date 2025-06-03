@@ -8,45 +8,12 @@ import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 import { Navigation, Pagination } from 'swiper/modules';
+import { rentalPlaceDetails } from "@/utils/data/rentalPlaceDetails";
 
-const rentalPlaces = [
-  {
-    name: "DK Living",
-    imageURL: "/images/rental/1. Kos DK Living.jpg",
-    location: "Jalan Soekarno Hatta Indah V no.7B",
-    url: "/rental/dk-living",
-  },
-  {
-    name: "Griya Artha Prima",
-    imageURL: "/images/rental/2. Kos Griya Artha Prima.jpg",
-    location: "Jalan Candi Mendut Barat Blok C no.16",
-    url: "/rental/griya-artha-prima",
-  },
-  {
-    name: "Maliqa",
-    imageURL: "/images/rental/3. Kos Maliqa.jpg",
-    location: "Jalan Candi Mendut Selatan III no.18",
-    url: "/rental/maliqa",
-  },
-  {
-    name: "DK Living",
-    imageURL: "/images/rental/1. Kos DK Living.jpg",
-    location: "Jalan Soekarno Hatta Indah V no.7B",
-    url: "/rental/dk-living",
-  },
-  {
-    name: "Griya Artha Prima",
-    imageURL: "/images/rental/2. Kos Griya Artha Prima.jpg",
-    location: "Jalan Candi Mendut Barat Blok C no.16",
-    url: "/rental/griya-artha-prima",
-  },
-  {
-    name: "Maliqa",
-    imageURL: "/images/rental/3. Kos Maliqa.jpg",
-    location: "Jalan Candi Mendut Selatan III no.18",
-    url: "/rental/maliqa",
-  },
-];
+const rentalPlaces = Object.entries(rentalPlaceDetails).map(([slug, data]) => ({
+  slug,
+  ...data
+}));
 
 export default function RentalPlaceSection() {
   const router = useRouter();
@@ -93,14 +60,15 @@ export default function RentalPlaceSection() {
             >
               {rentalPlaces?.map((info, index) => (
                 <SwiperSlide key={info?.name + index}>
-                  <div
-                    onClick={() => router.push(info?.url)}
+                  <Link
+                    href={`/rental/${info?.slug}`}
                     className="group relative col-span-1 flex h-[320px] w-full cursor-pointer flex-col gap-y-4 overflow-hidden rounded-xl bg-[#ffeeca] p-7 sm:h-[460px]"
                   >
                     <Image
-                      src={info?.imageURL}
+                      src={info?.roomVariant?.basic?.heroImage}
                       alt="Logo"
                       fill
+                      quality={80}
                       className="object-cover saturate-150 duration-500 ease-in-out group-hover:rotate-2 group-hover:scale-110"
                     />
                     <div className="absolute bottom-0 left-0 h-auto w-full translate-y-[100%] bg-gradient-to-t from-[#ffeeca] to-black/0 p-3 duration-500 ease-in-out group-hover:translate-y-[0%]">
@@ -109,8 +77,7 @@ export default function RentalPlaceSection() {
                           <span className="text-sm text-[#d4cab4] underline decoration-[#d4cab4]/80 underline-offset-2">
                             Click to see more details
                           </span>
-                          <Link
-                            href={info?.url}
+                          <div
                             className="flex h-12 w-12 items-center justify-center rounded-full bg-[#ffeeca]"
                           >
                             <svg
@@ -126,19 +93,19 @@ export default function RentalPlaceSection() {
                               <path d="M5 12h14" />
                               <path d="m12 5 7 7-7 7" />
                             </svg>
-                          </Link>
+                          </div>
                         </div>
                         <div className="">
                           <h3 className="mt-auto text-xl font-semibold text-[#ffeeca]">
                             {info?.name}
                           </h3>
-                          <span className="text-sm text-[#d4cab4]">
+                          <span className="text-sm text-[#d4cab4] line-clamp-1">
                             {info?.location}
                           </span>
                         </div>
                       </div>
                     </div>
-                  </div>
+                  </Link>
                 </SwiperSlide>
               ))}
             </Swiper>
