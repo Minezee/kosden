@@ -105,7 +105,7 @@ export const rentalPlaceDetails = {
         "facility": "",
         "location": "Jl. Danau jonge H7D no 21 sawojajar malang",
         "googleMapURL": "https://maps.app.goo.gl/AuWFXK7vvBwXKpWL8",
-        "iframeSrc": "https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d3951.2407776537043!2d112.66676707500687!3d-7.974049092051002!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zN8KwNTgnMjYuNiJTIDExMsKwNDAnMDkuNiJF!5e0!3m2!1sid!2sid!4v1748915019802!5m2!1sid!2sid",
+        "iframeSrc": "https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d3951.241290852281!2d112.66920252079242!3d-7.973995966552472!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zN8KwNTgnMjYuNiJTIDExMsKwNDAnMDkuNiJF!5e0!3m2!1sid!2sid!4v1749054208078!5m2!1sid!2sid",
         "roomVariant": {
             "basic": {
                 "heroImage": "/images/rental/Dajo Sawo Jajar/dajo-hero.jpeg",
@@ -136,7 +136,7 @@ export const rentalPlaceDetails = {
         "facility": "",
         "location": "Candi Mendut barat blok D no 1A",
         "googleMapURL": "https://maps.app.goo.gl/EEVCAA18jZJLDNtVA",
-        "iframeSrc": "https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d3951.56601253088!2d112.62613297500666!3d-7.940310492083788!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zN8KwNTYnMjUuMSJTIDExMsKwMzcnNDMuNCJF!5e0!3m2!1sid!2sid!4v1748915482815!5m2!1sid!2sid",
+        "iframeSrc": "https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d3951.5174366755564!2d112.59257932264455!3d-7.945358604465644!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zN8KwNTYnNDMuOSJTIDExMsKwMzUnMzMuNSJF!5e0!3m2!1sid!2sid!4v1749054615858!5m2!1sid!2sid",
         "roomVariant": {
             "basic": {
                 "heroImage": "/images/rental/Devy/devy-hero.jpeg",
@@ -226,7 +226,7 @@ export const rentalPlaceDetails = {
         "facility": "",
         "location": "Jalan Bunga Kaktus No.9",
         "googleMapURL": "https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d3951.4977335249077!2d112.61875537500671!3d-7.947405292076915!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zN8KwNTYnNTAuNyJTIDExMsKwMzcnMTYuOCJF!5e0!3m2!1sid!2sid!4v1748915548397!5m2!1sid!2sid",
-        "iframeSrc": "https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d3951.4977335249077!2d112.61875537500671!3d-7.947405292076915!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zN8KwNTYnNTAuNyJTIDExMsKwMzcnMTYuOCJF!5e0!3m2!1sid!2sid!4v1748918158750!5m2!1sid!2sid",
+        "iframeSrc": "https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d3951.4971196867846!2d112.62136248216918!3d-7.947469046811588!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zN8KwNTYnNTAuNyJTIDExMsKwMzcnMTYuOCJF!5e0!3m2!1sid!2sid!4v1749053708636!5m2!1sid!2sid",
         "roomVariant": {
             "basic": {
                 "heroImage": "/images/rental/Griya Shereen & Zeleeka/shereen-zeleeka-7.jpeg",

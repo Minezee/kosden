@@ -71,14 +71,16 @@ export default function RentalPlaceSection() {
                       quality={80}
                       className="object-cover saturate-150 duration-500 ease-in-out group-hover:rotate-2 group-hover:scale-110"
                     />
-                    <div className="absolute bottom-0 left-0 h-auto w-full translate-y-[100%] bg-gradient-to-t from-[#ffeeca] to-black/0 p-3 duration-500 ease-in-out group-hover:translate-y-[0%]">
-                      <div className="flex h-full w-full flex-col justify-end gap-y-5 rounded-lg bg-[#241503] p-4 backdrop-blur-md">
-                        <div className="flex w-full items-center justify-between">
-                          <span className="text-sm text-[#d4cab4] underline decoration-[#d4cab4]/80 underline-offset-2">
-                            Click to see more details
-                          </span>
+                    <div className="absolute bottom-0 left-0 h-auto w-full translate-y-[100%] bg-gradient-to-t from-[#ffeeca] to-black/0 p-1 lg:p-3 duration-500 ease-in-out group-hover:translate-y-[0%]">
+                      <div className="flex h-full w-full flex-col justify-end gap-y-5 rounded-lg bg-[#241503] p-3 pb-6 lg:p-4 backdrop-blur-md">
+                        <div className="flex flex-col-reverse lg:flex-row gap-2 lg:gap-0 w-full items-end lg:items-center justify-between">
+                          <div className="flex items-start flex-1 w-full">
+                            <span className="text-xs lg:text-sm text-[#d4cab4] underline decoration-[#d4cab4]/80 underline-offset-2">
+                              Click to see more details
+                            </span>
+                          </div>
                           <div
-                            className="flex h-12 w-12 items-center justify-center rounded-full bg-[#ffeeca]"
+                            className="flex h-8 lg:h-12 w-8 lg:w-12 items-center justify-center rounded-full bg-[#ffeeca]"
                           >
                             <svg
                               xmlns="http://www.w3.org/2000/svg"
@@ -96,10 +98,10 @@ export default function RentalPlaceSection() {
                           </div>
                         </div>
                         <div className="">
-                          <h3 className="mt-auto text-xl font-semibold text-[#ffeeca]">
+                          <h3 className="mt-auto text-sm lg:text-xl font-semibold text-[#ffeeca]">
                             {info?.name}
                           </h3>
-                          <span className="text-sm text-[#d4cab4] line-clamp-1">
+                          <span className="text-xs lg:text-sm text-[#d4cab4] line-clamp-1">
                             {info?.location}
                           </span>
                         </div>
