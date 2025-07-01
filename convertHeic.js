@@ -2,9 +2,8 @@
 const fs = require("fs");
 const path = require("path");
 const convert = require("heic-convert");
-const sharp = require("sharp");
 
-const rentalDir = path.join(__dirname, "public/images/rental");
+const rentalDir = path.join(__dirname, "public/images/rental/Griya Kendedes");
 
 async function convertHeicFile(inputPath, outputPath) {
     const inputBuffer = fs.readFileSync(inputPath);

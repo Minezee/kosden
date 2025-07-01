@@ -132,30 +132,6 @@ export default function ContactUsSection() {
                 {/* <span className="text-[#754a00]"></span> */}
               </div>
             </div>
-            <div className="grid w-full grid-rows-1 gap-4 md:grid-cols-3">
-              {rentalPlaceLocations.map((place, index) => (
-                <div
-                  key={index}
-                  onClick={() => window.open(place?.googleMapURL, "_blank")}
-                  className="col-span-1 row-span-1 flex h-full w-full cursor-pointer flex-col items-center justify-center gap-y-1 rounded-xl border border-[#754a00]/20 bg-[#ffeeca] p-7 shadow-none transition-all hover:translate-x-[-5px] hover:translate-y-[-5px] hover:shadow-[5px_5px_0px_#8c6001]"
-                >
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    stroke="currentColor"
-                    strokeWidth="2"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    className="lucide lucide-map-pin h-[38px] w-[38px] text-[#754a00]"
-                  >
-                    <path d="M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0" />
-                    <circle cx="12" cy="10" r="3" />
-                  </svg>
-                  <span className="text-[#754a00]">{place?.name}</span>
-                </div>
-              ))}
-            </div>
           </div>
         </div>
       </div>

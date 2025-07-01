@@ -65,14 +65,14 @@ export default function RentalPlaceSection() {
                     className="group relative col-span-1 flex h-[320px] w-full cursor-pointer flex-col gap-y-4 overflow-hidden rounded-xl bg-[#ffeeca] p-7 sm:h-[460px]"
                   >
                     <Image
-                      src={info?.roomVariant?.basic?.heroImage}
+                      src={info.generalImages ? info?.generalImages[0] : info?.roomVariant?.basic?.heroImage}
                       alt="Logo"
                       fill
                       quality={80}
                       className="object-cover saturate-150 duration-500 ease-in-out group-hover:rotate-2 group-hover:scale-110"
                     />
-                    <div className="absolute bottom-0 left-0 h-auto w-full translate-y-[100%] bg-gradient-to-t from-[#ffeeca] to-black/0 p-1 lg:p-3 duration-500 ease-in-out group-hover:translate-y-[0%]">
-                      <div className="flex h-full w-full flex-col justify-end gap-y-5 rounded-lg bg-[#241503] p-3 pb-6 lg:p-4 backdrop-blur-md">
+                    <div className="absolute bottom-0 left-0 h-auto w-full p-1 lg:p-3 duration-500 ease-in-out">
+                      <div className="flex h-full w-full flex-col justify-end gap-y-5 rounded-lg bg-[#241503]/80 p-3 pb-6 lg:p-4">
                         <div className="flex flex-col-reverse lg:flex-row gap-2 lg:gap-0 w-full items-end lg:items-center justify-between">
                           <div className="flex items-start flex-1 w-full">
                             <span className="text-xs lg:text-sm text-[#d4cab4] underline decoration-[#d4cab4]/80 underline-offset-2">
