@@ -32,7 +32,8 @@
     "**/*.ts",
     "**/*.tsx",
     ".next/types/**/*.ts",
-    "generateRentalPlaceDetails.js"
+    "generateRentalPlaceDetails.js",
+    "updateStrapiData.js"
   ],
   "exclude": [
     "node_modules"
