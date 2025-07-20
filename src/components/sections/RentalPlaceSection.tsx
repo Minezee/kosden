@@ -1,12 +1,11 @@
 import HomeSwiper from '../ui/HomeSwiper';
 
+// Set revalidate (ISR) untuk halaman ini
+export const revalidate = 60;
+
 const getData = async () => {
   const rentalData = await
-    fetch('https://kosden-cms.up.railway.app/api/rental-places?populate[generalImages]=true&populate[roomVariant][populate][heroImage]=true&populate[roomVariant][populate][images]=true&sort=name:ASC', {
-      next: {
-        revalidate: 60,
-      }
-    })
+    fetch('https://kosden-cms.up.railway.app/api/rental-places?populate[generalImages]=true&populate[roomVariant][populate][heroImage]=true&populate[roomVariant][populate][images]=true&sort=rank:ASC')
 
   const rentalDatas = await rentalData.json();
 
